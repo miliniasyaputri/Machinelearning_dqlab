@@ -1,0 +1,8 @@
+import pandas as pd
+raw_data = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/dataset_statistic.csv", sep=';')
+
+# Memilih kolom 'Pendapatan' saja
+print (data_raw['Pendatan'])
+ 
+# Memilih kolom 'Jenis Kelamin' dan 'Pendapatan'
+print (data_raw[['Jenis Kelamin', 'Pendatan']])
