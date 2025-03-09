@@ -1,0 +1,13 @@
+import pandas as pd
+raw_data = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/dataset_statistic.csv", sep=';')
+
+# menghitung korelasi dari setiap pasang variabel pada raw_data
+print (raw_data.corr())
+
+# mencari korelasi 'kendall' untuk tiap pasang variabel
+print (raw_data.corr(method='kendall'))
+ 
+# mencari korelasi 'spearman' untuk tiap pasang variabel
+print (raw_data.corr(method='spearman'))
+
+#Perhatikan bahwa hanya variabel bertipe numerik saja yang dihitung nilai korelasinya. Selain itu secara default method .corr() memiliki parameter method bernilai pearson sehingga nilai korelasi di atas adalah korelasi Pearson. Untuk menggantinya menjadi korelasi Kendall atau korelasi Spearman kita cukup menambahkan parameter method='kendall' atau method='spearman' pada method .corr() sebagaimana
